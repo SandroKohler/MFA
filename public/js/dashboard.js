@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('welcomeMessage').textContent = `Willkommen, ${user.email}!`;
         
         // MFA-Status überprüfen
-        firebase.auth().multiFactor(user).getEnrolledFactors()
+        firebase.auth().multiFactor(user).getEnrolledFactors() //! fixt that firebase.auth().multiFactor is not a function
           .then((enrolledFactors) => {
             if (enrolledFactors.length > 0) {
               // MFA ist aktiviert

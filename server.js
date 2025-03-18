@@ -34,6 +34,10 @@ app.get('/dashboard', (req, res) => {
   res.render('dashboard');
 });
 
+app.get('/register', (req, res) => {
+  res.render('register');
+});
+
 app.get('/login', (req, res) => {
   res.render('login');
 });
