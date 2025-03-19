@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('MFA ist erforderlich');
             
             // MFA-Resolver erhalten
-            resolver = firebase.auth.getMultiFactorResolver(auth, error);
+            resolver = error.resolver;
             
             // MFA-Verifikationsbereich anzeigen
             document.getElementById('mfaVerification').classList.remove('d-none');
